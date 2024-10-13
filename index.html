@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S1shka Merch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">S1shka Merch</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">На главную</a></li>
+                    <li><a href="#shop">Магазин</a></li>
+                    <li><a href="#about">О мне</a></li>
+                    <li><a href="#contact">Жаловаться тут</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>S1shka Merch</h1>
+            <p>Самый ахуенный и пиздатый мерч.</p>
+            <a href="#shop" class="cta-btn">Купить</a>
+        </div>
+    </section>
+
+    <section id="shop" class="shop">
+        <h2>Коллекции</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://images.prom.ua/4765693300_w640_h640_hudi-anime-tokijskij.jpg" alt="Hoodie">
+                <h3>S1shka Hoodie</h3>
+                <p>$49.99</p>
+                <button class="buy-btn">Купить</button>
+            </div>
+            <div class="product">
+                <img src="https://images.prom.ua/4307592290_w640_h640_futbolka-anime-comic.jpg" alt="T-Shirt">
+                <h3>S1shka T-Shirt</h3>
+                <p>$29.99</p>
+                <button class="buy-btn">Купить</button>
+            </div>
+            <div class="product">
+                <img src="https://images.prom.ua/5090046888_w640_h640_kepka-anime.jpg" alt="Cap">
+                <h3>S1shka Cap</h3>
+                <p>$19.99</p>
+                <button class="buy-btn">Купить</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>О мне</h2>
+        <p>Я сишка. Купите мерч.. пожалуйста... я хочу кушац.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Свяжитесь со мной и я обязательно вам не отвечу</h2>
+        <form>
+            <input type="text" placeholder="Погоняло на районе" required>
+            <input type="email" placeholder="Свой Email на базу" required>
+            <textarea placeholder="Ну блять, не пустое же сообщение мне отправлять(мне насраать)" required></textarea>
+            <button type="submit">Ну отправляй, надейся</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Иди нахуй.</p>
+    </footer>
+
+
+
+    <script>
+        // Фоновая анимация по времени суток
+        function updateBackgroundBasedOnTime() {
+            const currentHour = new Date().getHours();
+            const body = document.body;
+
+            if (currentHour >= 6 && currentHour < 12) {
+                // Утро
+                body.style.background = 'linear-gradient(to bottom, #FFDEE9, #B5FFFC)';
+            } else if (currentHour >= 12 && currentHour < 18) {
+                // День
+                body.style.background = 'linear-gradient(to bottom, #87CEEB, #FFFFFF)';
+            } else {
+                // Ночь
+                body.style.background = 'linear-gradient(to bottom, #2C3E50, #4CA1AF)';
+            }
+        }
+
+        updateBackgroundBasedOnTime();  // Устанавливаем фон при загрузке страницы
+    </script>
+</body>
+</html>
