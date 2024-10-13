@@ -1,0 +1,301 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    transition: background 1s ease; /* Плавная смена фона */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #2f3640;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6b6b, #6c5ce7); /* Это изменяется в зависимости от времени дня */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    animation: slideIn 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: slideIn 2s ease-out;
+}
+
+.cta-btn {
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #2f3640;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cta-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Shop section */
+.shop {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.shop h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #6c5ce7;
+}
+
+/* About and Contact sections */
+.about, .contact {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.about h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #6c5ce7;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #2f3640;
+    color: white;
+    text-align: center;
+}
+
+/* Кнопка "Загрузить ещё" */
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #6c5ce7;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-theme, footer.dark-theme {
+    background-color: #1f1f1f;
+}
+
+.buy-btn.dark-theme, .toggle-theme-btn.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.buy-btn.dark-theme:hover, .toggle-theme-btn.dark-theme:hover {
+    background-color: #555555;
+}
+
+/* Кнопка переключения темы */
+.toggle-theme-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-theme-btn:hover {
+    background-color: #6c5ce7;
+}
+
+/* Анимации фона в зависимости от времени суток */
+body.morning-theme {
+    background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+}
+
+body.day-theme {
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+}
+
+body.night-theme {
+    background: linear-gradient(to bottom, #2C3E50, #4CA1AF);
+}
